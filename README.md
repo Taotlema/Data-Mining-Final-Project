@@ -1,4 +1,4 @@
-# Data Mining Final Project: U.S. Domestic Commodity Flow Analysis
+# U.S. Domestic Commodity Flow Analysis
 ## Introduction
 
 ## About Our Data

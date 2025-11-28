@@ -12,7 +12,7 @@ Our team will conduct our data mining investigation using the **2017 Commodity F
 **Access Link:** https://www.census.gov/data/datasets/2017/econ/cfs/historical-datasets.html
 
 As mentioned, this databased contained a myriad of infomation needed to put together the exact realities of commodity exchanges across the United States. Which, can be very confusing for those unfammiliar with this kind of data. So below are tables showing relevant fields, and how we factored these into our project.
-
+- - -
 **Data Variables:** Index of fields attached to each commodity exchange.  
 
 | Field | Descirption |
@@ -22,7 +22,7 @@ As mentioned, this databased contained a myriad of infomation needed to put toge
 | **ORIG_MA** | Metropolitan area of shipment origin |
 | **ORIG_CFS_AREA** | CFS Area of shipment origin|
 | **DEST_STATE** | FIPS state code of shipment destination |
-| **DEST_MA** | Metro area of shipment destination |
+| **DEST_MA** | Metropolitan area of shipment destination |
 | **DEST_CFS_AREA** | CFS Area of shipment destination |
 | **NAICS** | Industry classification of shipper |
 | **QUARTER**| Quarter of 2017 in which the shipment occurred |
@@ -37,6 +37,16 @@ As mentioned, this databased contained a myriad of infomation needed to put toge
 | **EXPORT_CNTRY** | Export final destination - International Regions |
 | **HAZMAT** | Hazardous material (HAZMAT) code |
 | **WGT_FACTOR** | Shipment tabulation weighting factor. |
+- - -
+**CFS Areas:** These are effectively the area identifying codes, used to highlight where a commodity orginated from and it s being exported towards. For our project when mining we made the distinction of filtering out data for North Carolina speicifcally, or used Natioanl Data.
+
+| Metro Area Code | State Code | Location |
+|--------|----------|----------|
+| 172 | 37 | Charlotte-Concord |
+| 268 | 37 | Greensboro--Winston-Salem--High Point |
+| 450 | 37 | Raleigh-Durham-Chapel Hill |
+| 99999 | 37 | Remainder of North Carolina |
+
 
 ### Our Methodology
 

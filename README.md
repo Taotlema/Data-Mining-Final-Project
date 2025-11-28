@@ -65,6 +65,8 @@ Our approach to mining this data would rely on applying four of the techniques {
 
 ## Regression Investigation 
 
+Regression is a supervised machine learning system 
+
 ## Clustering Investigation
 
 ### Clustering: National Trends

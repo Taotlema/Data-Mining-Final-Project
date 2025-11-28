@@ -49,7 +49,7 @@ As mentioned, this databased contained a myriad of infomation needed to put toge
 
 ### Our Methodology
 
-Our approach to mining this data would rely on applying four of the techniques {Data Visualization, Classification, Regression, and Clustering}; learned in our data mining class. We would then leverage these techniques for investigations on either a North Carolinian, or National basis. Using each system to generate insight on the commodity data, while also assessing the utility and efficency of each data mining process. We will be asking and answering the questions, of how can we apply these techiniques within this given context and how useful is it to do so.
+Our approach to mining this data would rely on applying four of the techniques {**Data Visualization**, **Classification**, **Regression**, and **Clustering**} learned in our data mining class. We would then leverage these techniques for investigations on either a North Carolinian, or National basis. Using each system to generate insight on the commodity data, while also assessing the utility and efficency of each data mining process. We will be asking and answering the questions, of how can we apply these techiniques within this given context and how useful is it to do so.
 
 ## Initial Data Investigation
 

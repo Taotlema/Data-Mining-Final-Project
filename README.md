@@ -7,7 +7,36 @@ Throughout the Fall 2025 semester, the team behiend this project has been tasked
 
 ### About Our Data
 
-**Access Link:** ${\textsf{\color{blue}https://www.census.gov/data/datasets/2017/econ/cfs/historical-datasets.html}}$
+Our team will conduct our data mining investigation using the **2017 Commodity Flow Survey Database** provided by the **U.S. Census Bureau**. Commodities in this case would be best defined as typically raw and minimally processed materials or anything that wouldn't be a product or reasource sold directly to a consumer. An example would lumber, grain, or even machine parts. Using this provided database would play a pivotal role in storytelling about the realities of these exchanges. Below is a link to the website where we accessed our dataset and infromation. 
+
+**Access Link:** https://www.census.gov/data/datasets/2017/econ/cfs/historical-datasets.html
+
+As mentioned, this databased contained a myriad of infomation needed to put together the exact realities of commodity exchanges across the United States. Which, can be very confusing for those unfammiliar with this kind of data. So below are tables showing relevant fields, and how we factored these into our project.
+
+**Data Variables:** Index of fields attached to each commodity exchange.  
+
+| Field | Descirption |
+|--------|----------|
+| **SHIPMT_ID** | Shipment identifier |
+| **ORIG_STATE** | FIPS state code of shipment origin |
+| **ORIG_MA** | Metropolitan area of shipment origin |
+| **ORIG_CFS_AREA** | CFS Area of shipment origin|
+| **DEST_STATE** | FIPS state code of shipment destination |
+| **DEST_MA** | Metro area of shipment destination |
+| **DEST_CFS_AREA** | CFS Area of shipment destination |
+| **NAICS** | Industry classification of shipper |
+| **QUARTER**| Quarter of 2017 in which the shipment occurred |
+| **SCTG**| 2-digit SCTG commodity code of the shipment |
+| **MODE** | Mode of transportation of the shipment |
+| **SHIPMT_VALUE** | Value of the shipment in dollars |
+| **SHIPMT_WGHT**| Weight of the shipment in pounds |
+| **SHMPT_DIST_GC** | Great circle distance between shipment origin and destination (in miles) |
+| **SHMPT_DIST_ROUTED** | Routed distance between shipment origin and destination (in miles) |
+| **TEMP_CNTL_YN** | Temperature controlled shipment - Yes or No |
+| **EXPORT_YN** | Export shipment - Yes or No |
+| **EXPORT_CNTRY** | Export final destination - International Regions |
+| **HAZMAT** | Hazardous material (HAZMAT) code |
+| **WGT_FACTOR** | Shipment tabulation weighting factor. |
 
 ### Our Methodology
 

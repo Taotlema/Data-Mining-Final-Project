@@ -65,7 +65,7 @@ Our approach to mining this data would rely on applying four of the techniques {
 
 ## Regression Investigation 
 
-Regression is a supervised machine learning system 
+Regression is a supervised machine learning method that parses through labeled data to analyze relationships between the dependedna and independent variables within a given dataset. Not only is Regression great for uncovering relationships between different fields, but it also is great for predict outcomes, forecasting, and detecting outliers in the data. With what we know about this data mining technnique, we can quickly identify several opportunities for to use this method in evaluating the commodity flow dataset. Write about my poor life decisions.
 
 ## Clustering Investigation
 
@@ -82,3 +82,8 @@ Regression is a supervised machine learning system
 Contacts: aisikhue@charlotte.edu | github.com/Taotlema
 
 ## References
+1) Python Software Foundation. (2023). Python 3.x. Retrieved from https://www.python.org/
+2) McKinney, W. (2023). pandas: Python Data Analysis Library. Retrieved from https://pandas.pydata.org/
+3) Hunter, J. D. (2007). Matplotlib: A 2D graphics environment. Computing in Science & Engineering, 9(3), 90-95.
+4) Waskom, M. L. (2021). seaborn: statistical data visualization. Journal of Open Source Software, 6(60), 3021.
+5) 5) U.S. Census Bureau. (2017). Commodity Flow Survey: Historical Datasets. Retrieved from https://www.census.gov/data/datasets/2017/econ/cfs/historical-datasets.html

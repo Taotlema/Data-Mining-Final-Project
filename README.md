@@ -82,7 +82,69 @@ For our final visualization of national trends, we wanted to understand what was
 
 ## Regression Investigation 
 
-Regression is a supervised machine learning method that parses through labeled data to analyze relationships between the dependedna and independent variables within a given dataset. Not only is Regression great for uncovering relationships between different fields, but it also is great for predict outcomes, forecasting, and detecting outliers in the data. With what we know about this data mining technnique, we can quickly identify several opportunities for to use this method in evaluating the commodity flow dataset. Write about my poor life decisions.
+Regression is a supervised machine learning method that parses through labeled data to analyze relationships between the dependedna and independent variables within a given dataset. Not only is Regression great for uncovering relationships between different fields, but it also is great for predict outcomes, forecasting, and detecting outliers in the data. With what we know about this data mining technnique, we can quickly identify several opportunities for to use this method in evaluating the commodity flow dataset.
+
+Given what we know about how regression is typically implemented, the goals of our investigation is two-fold:
+- **Identify which features have the strongest relationship with shipment value.**
+- **Evaluate how well we can predict shipment value using different engineered inputs.**
+
+**Initial Exploration and Correlation Analysis**
+To prepare for regression modeling, we began by exploring relationships across all fields in the dataset through a correlation heatmap. Because the dataset contains a mix of categorical, binary, and numerical variables, several fields were encoded or mapped to ensure they could be meaningfully compared.  
+
+The resulting heatmap provided early insight into which variables carried the strongest linear relationships with one another. As expected, we observed relatively low correlation between most variables and shipment value, which previewed the challenges of building strong predictive models on this dataset.
+
+<img width="720" height="541" alt="image" src="https://github.com/Taotlema/Data-Mining-Final-Project/blob/main/Output%20Files/Regression/output_7_0.png?raw=true" />
+
+
+**Visualizing Shipment Value by Commodity Category**  
+
+To further understand how the target variable behaved across the dataset, we generated a boxplot breaking down shipment value by SCTG commodity code. This visualization revealed that certain categories contain extreme high-value outliers—likely representing unusually large or specialized shipments—while most remain tightly concentrated near lower shipment values.
+
+This distribution confirms that the dataset has heavy tails, which complicates prediction and contributes to the high RMSE observed later.
+
+<img width="720" height="541" alt="image" src="https://github.com/Taotlema/Data-Mining-Final-Project/blob/main/Output%20Files/Regression/output_9_0.png?raw=true" />
+
+**Feature Engineering and Preparation**  
+
+Before training our regression models, we engineered several new features to bring more structure and signal into the dataset:
+- TEMP_CNTL, EXPORT, HAZ – converted operational flags into binary features
+- DIST_RATIO – ratio of routed to straight-line distance, indicating route complexity
+- VALUE_PER_LB – shipment value normalized by weight
+- Standard numerical fields such as weight, distance, commodity code, and NAICS were preserved as core predictors
+
+We then used SelectKBest with an F-test scoring function to automatically identify the top 8 most predictive features. These included:
+- SHIPMT_WGHT (strongest predictor by far)
+- EXPORT
+- VALUE_PER_LB
+- DIST_RATIO
+- TEMP_CNTL
+- SHIPMT_DIST_ROUTED
+- HAZ
+- SCTG
+This selection process helped narrow the focus to features with meaningful influence over shipment value.
+
+**Regression Models and Evaluation**
+
+We developed and tested two regression models using identical preprocessing pipelines:
+- Linear Regression
+- Ridge Regression (with regularization parameter alpha = 5.0)
+Both pipelines included imputation, scaling, feature selection, and model fitting. We trained using an 80/20 train–test split.
+
+**Model Performance**
+Across both runs of our experiments, the models performed nearly identically. While they were not strong predictors, they provided meaningful insight into the complexity and variability of shipment value in commodity flow data.  
+
+Key metrics included:
+- R² ≈ 0.08 : the models explain roughly 8% of the variance
+- Test RMSE ≈ $275,000 : reflecting extreme outliers and heavy-tailed distributions
+- MAE ≈ $19,500 : average error across predictions
+- Training R² ≈ 0.004 : showing almost no learnable linear structure in training data
+
+Ridge regularization made almost no difference, indicating that overfitting was not a significant issue in the first place—the dataset is simply noisy and lacks strong linear relationships between features and shipment value.
+
+<img width="720" height="541" alt="image" src="https://github.com/Taotlema/Data-Mining-Final-Project/blob/main/Output%20Files/Regression/output_19_1.png?raw=true" />
+
+
+Although our models did not produce strong predictive power, the regression investigation still proved valuable in revealing how different factors influence shipment value. We found that physical characteristics; particularly shipment weight and value density—played the most significant role, while operational flags such as export status and temperature control had smaller but still measurable effects. The limited R² scores suggested that linear methods can only capture a small portion of the variability in shipment value, likely due to the complexity of freight pricing and other factors not represented in the dataset. Ultimately, **regression served less as a forecasting tool and more as a diagnostic technique**, helping us identify which features meaningfully contribute to shipment value and where the data lacks strong linear relationships.
 
 ## Clustering Investigation
 

@@ -55,6 +55,23 @@ Our approach to mining this data would rely on applying four of the techniques {
 
 ### Visualizing: National Trends
 
+<img width="853" height="456" alt="image" src="https://github.com/user-attachments/assets/92b092a5-7813-46d4-8f15-57aa0a9ff15c" />
+
+To better understand out data, we wanted to first investigate what the data could tell us about the national trends. Our first visualization looks at which states contributed the most to outbound commodity shipment value, and based on the dataset's FIPS codes, the top three were South Carolina, Texas, and Washington. These states being at the top highlight how the outbound commodity movement is much higher in these areas, and less distributed in other areas in the country. Outbound commodity is much more concentrated in these states where there is more high-voume export infrastructure, and signifies a large industrial/agriciultural output. These results show how these states play a much larger role in driving national commodity flow than others, which can be attributed to factors such as strong machinery production, the massive energy sectors in Texas, and the international port activity in Washington.
+
+<img width="720" height="541" alt="image" src="https://github.com/user-attachments/assets/1ceeaf56-0679-4ea8-ac4a-56b3c9a170c3" />
+
+In our second visualization we looked at how commidities were transported across the U.S., and learned that the top three modes by far were 4 (For-hire truck), 5 (Company-owned truck), and 14 (Parcel/USPS/Courier), which drastically dominated the shipment activity across other modes. This distribution aligns with the structure of the U.S. freight system, where trucking remains one of the more important and popular modes of transporting. For-hire and company-owned trucking together accounted for the vast majority of freight movement, which aligns with the country's extensive highway system and dependency. The prominence of parcel/USPS/courier reveals the growing nationwide demand for e-commerce activity and smaller shipments as well. Other modes such as rail, air, and water were far less frequent, indicating that they perhaps serve more industry specific roles, but overall the distribution reveals how central trucking is in the flow of commodities.
+
+<img width="866" height="542" alt="image" src="https://github.com/user-attachments/assets/58f31572-561e-45ef-8290-31c38c26596c" />
+
+For the third visualization, we looked at the shipment distance distribution. The histogram reveals that a big majority of most shipment fall within shorter distance ranges, which could suggest a strong reliance on regional transport opposed to traveling longer distances. This reflects how many materials and goods are usually sourced and consumed within the same generla region to minimize transportation time and costs. However, there is still presence of long-distance transportation, which signifies that there are some industries that rely on across regional distribution. This spread of distribution provides useful context in analyzing transportation mode choices such as why trucking is much more prevalent, which aligns with how most shipment is within a drivable distance.
+
+<img width="866" height="542" alt="image" src="https://github.com/user-attachments/assets/46558479-e8e0-4daa-97ed-d6c6fbf6ea92" />
+
+For our final visualization of national trends, we wanted to understand what was actually being moved, and visualized the more frequenty occuring commodity categories by SCTG (Standard Classification of Transported Goods) code. The chart reveals that the top three most transported goods were codes 43, 35, and 40, which corresponded to mixed freight, electronic and other electrical equipment and components, and miscellaneous manufactured products. These results reveal how much of the freight system could be driven by high-volume and manufacturing related good. Mixed freight goods can reflect multiple types of foods togetherm which can signify the common logistical practices in trucking and parcel shipping. The large amount of electronic goods being moved also signifies a nationwide demand for such products. The prevalence of miscellaneous goods being moved also signals a large demand for varying manufactured goods. Overall, these top categories reveal that the national commodity flow in the U.S. is shaped heavily by mixed loads, electronics, and general manufactured goods.
+
+
 ### Visualizing: NC Trends
 
 ## Classification Investigation

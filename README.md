@@ -89,4 +89,4 @@ Contacts: mrobe142@charlotte.edu | github.com/madieroberts
 2) McKinney, W. (2023). pandas: Python Data Analysis Library. Retrieved from https://pandas.pydata.org/
 3) Hunter, J. D. (2007). Matplotlib: A 2D graphics environment. Computing in Science & Engineering, 9(3), 90-95.
 4) Waskom, M. L. (2021). seaborn: statistical data visualization. Journal of Open Source Software, 6(60), 3021.
-5) 5) U.S. Census Bureau. (2017). Commodity Flow Survey: Historical Datasets. Retrieved from https://www.census.gov/data/datasets/2017/econ/cfs/historical-datasets.html
+5) U.S. Census Bureau. (2017). Commodity Flow Survey: Historical Datasets. Retrieved from https://www.census.gov/data/datasets/2017/econ/cfs/historical-datasets.html

@@ -124,6 +124,7 @@ We then used SelectKBest with an F-test scoring function to automatically identi
 - SHIPMT_DIST_ROUTED
 - HAZ
 - SCTG
+
 This selection process helped narrow the focus to features with meaningful influence over shipment value.
 
 **Regression Models and Evaluation**
@@ -131,6 +132,7 @@ This selection process helped narrow the focus to features with meaningful influ
 We developed and tested two regression models using identical preprocessing pipelines:
 - Linear Regression
 - Ridge Regression (with regularization parameter alpha = 5.0)
+
 Both pipelines included imputation, scaling, feature selection, and model fitting. We trained using an 80/20 train–test split.
 
 **Model Performance**  
@@ -154,6 +156,15 @@ Although our models did not produce strong predictive power, the regression inve
 
 ### Clustering: National Trends
 
+<img width="720" alt="Clustering Table" src="https://github.com/jess11233/Data-Mining-Final-Project/blob/main/output%20files/Clustering/clustermodel.png?raw=true" />
+
+
+To describe my data mining process for this clustering model first I will describe what this model is. This is a comparative K-means clustering model that uses several values of k. This model is meant to calculate inertia and silhouette scores for each tested k value to evaluate the cluster quality. The reason why I am made this model is to discover any patterns in export shipments, I also wanted to determine with the clustering model how shipments group together based on export status, destination country, value, and weight. How I made this clustering model is by first making EXPORT_YN and EXPORT_CNTRY numerical categories, then I made a table with important factors for analying the exporting. After that I scaled the selected features and compared multiple K values, lastly I made the compared multiple K values results visual. 
+
+<img width="720" alt="Elbow method plot graph" src="https://github.com/jess11233/Data-Mining-Final-Project/blob/main/output%20files/Clustering/output_elbow.png?raw=true" />
+<img width="720" alt="Silhouette Score Plot graph" src="https://github.com/jess11233/Data-Mining-Final-Project/blob/main/output%20files/Clustering/output_SS.png?raw=true" />
+
+
 ### Clustering: NC Trends
 
 ## Grand Overview
@@ -169,6 +180,9 @@ Contacts: mrobe142@charlotte.edu | github.com/madieroberts
 ### Jesse Schefers
 **Computer Science Student** at University of North Carolina at Charlotte | Class of 2026<br>
 Contacts: jschefer@charlotte.edu | github.com/jess11233
+### Nash Balakrishna
+**Data Science Major and Computer Science Minor** at University of North Carolina at Charlotte | Class of 2026<br>
+Contacts: nbalakr2@charlotte.edu | github.com/nbalakr2
 
 ## References
 1) Python Software Foundation. (2023). Python 3.x. Retrieved from https://www.python.org/

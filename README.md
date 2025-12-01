@@ -80,6 +80,9 @@ For our final visualization of national trends, we wanted to understand what was
 
 ### Classification: NC Trends
 
+For this part of the question we built a Binary classification model to answer the question “Can we predict whether a shipment from North Carolina will be exported (EXPORT_YN) based on commodity type (SCTG), transportation mode, weight, and distance?”.  The preprocessing for this was creating a new Dataset of only the NC values, and dropped the Export boolean column.  We then applied hot encoding for categorical variables and scaling for numeric variables, and the model was tried using a 75/25 train–test split.  With this processing the model was able to distinguish between domestic and export shipments.  Overall, the model demonstrated that features like transportation mode, commodity classification, and travel distance play meaningful roles in predicting whether a shipment is exported, providing useful insight into North Carolina shipping patterns.
+
+
 ## Regression Investigation 
 
 Regression is a supervised machine learning method that parses through labeled data to analyze relationships between the dependedna and independent variables within a given dataset. Not only is Regression great for uncovering relationships between different fields, but it also is great for predict outcomes, forecasting, and detecting outliers in the data. With what we know about this data mining technnique, we can quickly identify several opportunities for to use this method in evaluating the commodity flow dataset.

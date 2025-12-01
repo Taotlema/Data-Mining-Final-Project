@@ -3,15 +3,15 @@ This repository and its contributions have been dedicated to the Final Project o
 
 ## Introduction
 
-Throughout the Fall 2025 semester, the team behiend this project has been tasked with learning and implementing data mining techniques. Using a range of algorithms and machine learning to uncover patterns, trends, and useful information from data. Oftentimes applying these systems to specific senarios involing finance, commerce or transits; fields which greatly benefit from data analysis. As we embark creating on one last course application we've delegated to uncover as much meaningful insight from domestic commodity exhanges across the United States. Leveraging this ample playground of information to try and apply the majority of the learning competencies from our course.
+Throughout the Fall 2025 semester, the team behind this project has been tasked with learning and implementing data mining techniques, using a range of algorithms and machine learning tools to uncover patterns, trends, and useful information from data. These systems are often applied to scenarios involving finance, commerce, or transit; fields that greatly benefit from data analysis. As we embark on creating one last course application, we’ve been tasked with uncovering meaningful insights from domestic commodity exchanges across the United States, leveraging this ample playground of information to apply the majority of the learning competencies from our course.
 
 ### About Our Data
 
-Our team will conduct our data mining investigation using the **2017 Commodity Flow Survey Database** provided by the **U.S. Census Bureau**. Commodities in this case would be best defined as typically raw and minimally processed materials or anything that wouldn't be a product or reasource sold directly to a consumer. An example would lumber, grain, or even machine parts. Using this provided database would play a pivotal role in storytelling about the realities of these exchanges. Below is a link to the website where we accessed our dataset and infromation. 
+Our team conducted our data mining investigation using the **2017 Commodity Flow Survey Database** provided by the **U.S. Census Bureau**. Commodities in this context are best defined as raw or minimally processed materials—anything that wouldn't typically be a finished product or resource sold directly to a consumer. Examples include lumber, grain, or machine parts. This database played a pivotal role in telling the story behind these exchanges. Below is a link to the website where we accessed our dataset and supporting information.
 
 **Access Link:** https://www.census.gov/data/datasets/2017/econ/cfs/historical-datasets.html
 
-As mentioned, this databased contained a myriad of infomation needed to put together the exact realities of commodity exchanges across the United States. Which, can be very confusing for those unfammiliar with this kind of data. So below are tables showing relevant fields, and how we factored these into our project.
+As mentioned, this database contains a wide range of information needed to understand the realities of commodity exchanges across the United States, which can be confusing for those unfamiliar with this type of data. Below are tables showing relevant fields and how we factored them into our project.
 - - -
 **Data Variables:** Index of fields attached to each commodity exchange.  
 
@@ -38,7 +38,7 @@ As mentioned, this databased contained a myriad of infomation needed to put toge
 | **HAZMAT** | Hazardous material (HAZMAT) code |
 | **WGT_FACTOR** | Shipment tabulation weighting factor. |
 - - -
-**CFS Areas:** These are effectively the area identifying codes, used to highlight where a commodity orginated from and it s being exported towards. For our project when mining we made the distinction of filtering out data for North Carolina speicifcally, or used Natioanl Data.
+**CFS Areas:** These are the area identifying codes used to highlight where a commodity originated from and where it was shipped to. For our project, we made the distinction of filtering out data for North Carolina specifically or using national data.
 
 | Metro Area Code | State Code | Location |
 |--------|----------|----------|
@@ -49,7 +49,7 @@ As mentioned, this databased contained a myriad of infomation needed to put toge
 
 ### Our Methodology
 
-Our approach to mining this data would rely on applying four of the techniques {**Data Visualization**, **Classification**, **Regression**, and **Clustering**} learned in our data mining class. We would then leverage these techniques for investigations on either a North Carolinian, or National basis. Using each system to generate insight on the commodity data, while also assessing the utility and efficency of each data mining process. We will be asking and answering the questions, of how can we apply these techiniques within this given context and how useful is it to do so.
+Our approach to mining this data relies on applying four of the techniques learned in our data mining class: **Data Visualization**, **Classification**, **Regression**, and **Clustering**. We leveraged these techniques to investigate the data on either a North Carolina–specific or national basis. Each system helped us generate insight into the commodity data while also allowing us to assess the utility and efficiency of each data mining process. We sought to ask and answer the questions: How can we apply these techniques within this context, and how useful is it to do so?
 
 ## Initial Data Investigation
 
@@ -121,6 +121,7 @@ We then used SelectKBest with an F-test scoring function to automatically identi
 - SHIPMT_DIST_ROUTED
 - HAZ
 - SCTG
+
 This selection process helped narrow the focus to features with meaningful influence over shipment value.
 
 **Regression Models and Evaluation**
@@ -130,7 +131,8 @@ We developed and tested two regression models using identical preprocessing pipe
 - Ridge Regression (with regularization parameter alpha = 5.0)
 Both pipelines included imputation, scaling, feature selection, and model fitting. We trained using an 80/20 train–test split.
 
-**Model Performance**
+**Model Performance**  
+
 Across both runs of our experiments, the models performed nearly identically. While they were not strong predictors, they provided meaningful insight into the complexity and variability of shipment value in commodity flow data.  
 
 Key metrics included:

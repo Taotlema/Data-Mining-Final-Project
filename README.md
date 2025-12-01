@@ -129,6 +129,7 @@ This selection process helped narrow the focus to features with meaningful influ
 We developed and tested two regression models using identical preprocessing pipelines:
 - Linear Regression
 - Ridge Regression (with regularization parameter alpha = 5.0)
+
 Both pipelines included imputation, scaling, feature selection, and model fitting. We trained using an 80/20 train–test split.
 
 **Model Performance**  
@@ -176,6 +177,9 @@ Contacts: mrobe142@charlotte.edu | github.com/madieroberts
 ### Jesse Schefers
 **Computer Science Student** at University of North Carolina at Charlotte | Class of 2026<br>
 Contacts: jschefer@charlotte.edu | github.com/jess11233
+### Nash Balakrishna
+**Data Science Major and Computer Science Minor** at University of North Carolina at Charlotte | Class of 2026<br>
+Contacts: nbalakr2@charlotte.edu | github.com/nbalakr2
 
 ## References
 1) Python Software Foundation. (2023). Python 3.x. Retrieved from https://www.python.org/

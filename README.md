@@ -177,6 +177,9 @@ Contacts: mrobe142@charlotte.edu | github.com/madieroberts
 ### Jesse Schefers
 **Computer Science Student** at University of North Carolina at Charlotte | Class of 2026<br>
 Contacts: jschefer@charlotte.edu | github.com/jess11233
+### Nash Balakrishna
+**Data Science Major and Computer Science Minor** at University of North Carolina at Charlotte | Class of 2026<br>
+Contacts: nbalakr2@charlotte.edu | github.com/nbalakr2
 
 ## References
 1) Python Software Foundation. (2023). Python 3.x. Retrieved from https://www.python.org/

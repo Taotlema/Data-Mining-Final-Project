@@ -129,6 +129,7 @@ This selection process helped narrow the focus to features with meaningful influ
 We developed and tested two regression models using identical preprocessing pipelines:
 - Linear Regression
 - Ridge Regression (with regularization parameter alpha = 5.0)
+
 Both pipelines included imputation, scaling, feature selection, and model fitting. We trained using an 80/20 train–test split.
 
 **Model Performance**  

@@ -156,13 +156,28 @@ Although our models did not produce strong predictive power, the regression inve
 
 ### Clustering: National Trends
 
-<img width="720" alt="Clustering Table" src="https://github.com/Taotlema/Data-Mining-Final-Project/blob/main/output%20files/Clustering/clustermodel.png?raw=true" />
+<img width="720" alt="Clustering Table" src="Output%20Files/Clustering/clustermodel.png" />
 
 
 To describe my data mining process for this clustering model first I will describe what this model is. This is a comparative K-means clustering model that uses several values of k. This model is meant to calculate inertia and silhouette scores for each tested k value to evaluate the cluster quality. The reason why I am made this model is to discover any patterns in export shipments, I also wanted to determine with the clustering model how shipments group together based on export status, destination country, value, and weight. How I made this clustering model is by first making EXPORT_YN and EXPORT_CNTRY numerical categories, then I made a table with important factors for analying the exporting. After that I scaled the selected features and compared multiple K values, lastly I made the compared multiple K values results visual. 
 
-<img width="720" alt="Elbow method plot graph" src="https://github.com/Taotlema/Data-Mining-Final-Project/blob/main/output%20files/Clustering/output_elbow.png?raw=true" />
-<img width="720" alt="Silhouette Score Plot graph" src="https://github.com/Taotlema/Data-Mining-Final-Project/blob/main/output%20files/Clustering/output_SS.png?raw=true" />
+**Cluster Plot Graphs**
+
+Elbow method plot of the k-means clustering: 
+- Lower inertia = more compact clusters
+- Higher inertia = clusters are less compact 
+
+The Elbow method plot of the k-means clustering shows how compact the clusters are for each k and helps identify the point where adding more clusters stops improving the model.
+
+silhouette score by number of clusters plot graph: 
+- Closer to 1 = cleanly separated clusters
+- Around 0 = overlapping clusters
+- Negative = bad clustering
+
+While the silhouette score by number of clusters plot graph shows how well-separated and well-defined the clusters are for each k and helps confirm the quality of cluster formation.
+
+<img width="720" alt="Elbow method plot graph" src="Output%20Files/Clustering/output_elbow.png" />
+<img width="720" alt="Silhouette Score Plot graph" src="Output%20Files/Clustering/output_SS.png" />
 
 
 ### Clustering: NC Trends

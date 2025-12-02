@@ -78,6 +78,125 @@ For our final visualization of national trends, we wanted to understand what was
 
 ### Classifcation: National Trends
 
+For my part of the project, I focused on classification at the national level. Earlier in the analysis we saw that three transportation modes dominate U.S. shipment activity: for-hire truck (4), company-owned truck (5), and parcel/USPS/courier (14). So instead of trying to predict every possible mode, I built a classification model to distinguish only between these three. The primary goal was to see how well a model could recognize patterns in the commodity flow data and predict how a shipment is likely to move.
+
+## Preprocessing and Feature Engineering
+
+Before training, I had to clean and restructure the dataset. A lot of the fields needed to be converted into something a model could actually work with.
+
+### Filtering to the three major modes
+
+Once I filtered down to MODE 4, 5, and 14, the dataset went from 213k rows to 204,902 rows, with the following counts:
+
+- 83,602 shipments → MODE 4  
+- 65,119 shipments → MODE 5  
+- 56,181 shipments → MODE 14  
+
+This lines up with our earlier visualizations showing trucking dominating national freight.
+
+### Encoding all the categorical fields
+
+Several columns weren’t numeric, so I encoded them:
+
+- **SCTG codes** were mapped to a numerical index (`SCTG_indexed`) and the original SCTG column was removed.  
+- **EXPORT_CNTRY** was one-hot encoded, which created individual columns for each export region.  
+- **HAZMAT** was also one-hot encoded to capture the different hazard classes.  
+- **TEMP_CNTL_YN** and **EXPORT_YN** were mapped from 'Y'/'N' to 1/0, with missing values defaulting to 0.  
+
+After all this, the feature matrix ended up with 24 columns total.
+
+### Handling missing values
+
+The only column with missing values was `WGT_FACTOR`.  
+I filled missing values using the mean within each split (train, dev, test), which avoids data leakage.
+
+### Train / Dev / Test Splits
+
+I created two splits:
+
+#### Train–test split  
+- 10,000 rows used for the test set  
+- The rest for training (stratified by MODE)
+
+#### Train–dev split  
+- Took another 10,000 rows out of the training set for development/validation
+
+The final counts were:
+
+- **Training:** ~184,902 rows  
+- **Development:** 10,000 rows  
+- **Testing:** 10,000 rows  
+
+This setup gave me room to train models and evaluate them honestly without touching the test set.
+
+---
+
+## Models and Results
+
+I tested two models: **Logistic Regression** and a **Decision Tree**. I mainly wanted to compare how a linear model vs. a non-linear model handled this mix of encoded and numeric features.
+
+### Logistic Regression
+
+- `solver='liblinear'`  
+- `max_iter=10000`  
+
+**Development Accuracy:** 0.7157
+
+| Mode | Precision | Recall | F1 |
+|------|-----------|--------|----|
+| 4 | 0.76 | 0.63 | 0.69 |
+| 5 | 0.62 | 0.72 | 0.67 |
+| 14 | 0.78 | 0.84 | 0.81 |
+
+Logistic Regression picked up on some of the differences between the modes, but it struggled the most with MODE 4 vs MODE 5. That makes sense because the two trucking modes are inherently similar in weight, value, and distance profiles.
+
+### Decision Tree Classifier
+
+- `random_state=42`  
+- No other tuning  
+
+**Development Accuracy:** 0.7292
+
+| Mode | Precision | Recall | F1 |
+|------|-----------|--------|----|
+| 4 | 0.71 | 0.73 | 0.72 |
+| 5 | 0.70 | 0.70 | 0.70 |
+| 14 | 0.79 | 0.77 | 0.78 |
+
+The Decision Tree performed slightly better overall and produced more balanced scores. Since it can capture interactions between variables, it handled the subtleties between different shipment types better than Logistic Regression.
+
+---
+
+## Insights and Interpretation
+
+Even though the models are far from perfect, they still reveal useful information about national shipment behavior:
+
+- **Trucking really dominates**, and the models reflect that. Both MODE 4 and MODE 5 show up constantly, which makes it harder for any model to cleanly separate them.  
+- **Parcel shipments stand out the most.** MODE 14 consistently has the strongest metrics because these shipments tend to be lighter and behave differently than bulk freight.  
+- **Company-owned vs. for-hire trucking is the hardest distinction.** Their feature distributions overlap almost entirely. Without deeper operational data, it makes sense that the models confuse them.  
+- **Non-linear relationships matter.** The Decision Tree’s improvement shows that mode choice isn’t a simple linear problem.  
+
+Overall, classification helped us understand how shipments “cluster” around transportation modes, even if the models aren’t meant to be perfect predictors.
+
+---
+
+## Impact and Considerations
+
+If a system like this were used in a real logistics environment, it could influence:
+
+- **Infrastructure planning** — which regions are relying most heavily on trucking or parcel networks  
+- **Sustainability efforts** — spotting opportunities for shifting freight to cleaner modes  
+- **Operational decision-making** — anticipating how shipments are likely to move  
+
+At the same time, there are limitations:
+
+- We don’t have cost structures, deadlines, or carrier constraints, all of which heavily influence mode selection.  
+- A model trained on historical patterns could reinforce existing inefficiencies.  
+- Misclassification in the real world could lead to planning mistakes or uneven distribution of freight traffic.  
+
+Because of this, classification in this context is best used as a **pattern-finding tool**, not for automated routing decisions.
+
+
 ### Classification: NC Trends
 
 For this part of the question we built a Binary classification model to answer the question “Can we predict whether a shipment from North Carolina will be exported (EXPORT_YN) based on commodity type (SCTG), transportation mode, weight, and distance?”.  The preprocessing for this was creating a new Dataset of only the NC values, and dropped the Export boolean column.  We then applied hot encoding for categorical variables and scaling for numeric variables, and the model was tried using a 75/25 train–test split.  With this processing the model was able to distinguish between domestic and export shipments.  Overall, the model demonstrated that features like transportation mode, commodity classification, and travel distance play meaningful roles in predicting whether a shipment is exported, providing useful insight into North Carolina shipping patterns.

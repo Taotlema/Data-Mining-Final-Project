@@ -300,6 +300,10 @@ While the silhouette score by number of clusters plot graph shows how well-separ
 
 
 ### Clustering: NC Trends
+<img width="720" alt="PCA graph" src="Output%20Files/Clustering/PCA.png" />
+<img width="720" alt="Elbow method plot graph" src="Output%20Files/Clustering/Elbow method.png" />
+<img width="720" alt="Box plot evaluation" src="Output%20Files/Clustering/Box Plot Evaluation.png" />
+<img width="720" alt="Pairplot evaluation" src="Output%20Files/Clustering/Pairplot Evaluation.png" />
 
 ## Grand Overview
 

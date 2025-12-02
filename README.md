@@ -80,11 +80,11 @@ For our final visualization of national trends, we wanted to understand what was
 
 For my part of the project, I focused on classification at the national level. Earlier in the analysis we saw that three transportation modes dominate U.S. shipment activity: for-hire truck (4), company-owned truck (5), and parcel/USPS/courier (14). So instead of trying to predict every possible mode, I built a classification model to distinguish only between these three. The primary goal was to see how well a model could recognize patterns in the commodity flow data and predict how a shipment is likely to move.
 
-## Preprocessing and Feature Engineering
+#### Preprocessing and Feature Engineering
 
 Before training, I had to clean and restructure the dataset. A lot of the fields needed to be converted into something a model could actually work with.
 
-### Filtering to the three major modes
+#### Filtering to the three major modes
 
 Once I filtered down to MODE 4, 5, and 14, the dataset went from 213k rows to 204,902 rows, with the following counts:
 
@@ -94,7 +94,7 @@ Once I filtered down to MODE 4, 5, and 14, the dataset went from 213k rows to 20
 
 This lines up with our earlier visualizations showing trucking dominating national freight.
 
-### Encoding all the categorical fields
+#### Encoding all the categorical fields
 
 Several columns weren’t numeric, so I encoded them:
 
@@ -105,20 +105,20 @@ Several columns weren’t numeric, so I encoded them:
 
 After all this, the feature matrix ended up with 24 columns total.
 
-### Handling missing values
+#### Handling missing values
 
 The only column with missing values was `WGT_FACTOR`.  
 I filled missing values using the mean within each split (train, dev, test), which avoids data leakage.
 
-### Train / Dev / Test Splits
+#### Train / Dev / Test Splits
 
 I created two splits:
 
-#### Train–test split  
+##### Train–test split  
 - 10,000 rows used for the test set  
 - The rest for training (stratified by MODE)
 
-#### Train–dev split  
+##### Train–dev split  
 - Took another 10,000 rows out of the training set for development/validation
 
 The final counts were:
@@ -131,11 +131,11 @@ This setup gave me room to train models and evaluate them honestly without touch
 
 ---
 
-## Models and Results
+#### Models and Results
 
 I tested two models: **Logistic Regression** and a **Decision Tree**. I mainly wanted to compare how a linear model vs. a non-linear model handled this mix of encoded and numeric features.
 
-### Logistic Regression
+#### Logistic Regression
 
 - `solver='liblinear'`  
 - `max_iter=10000`  
@@ -150,7 +150,7 @@ I tested two models: **Logistic Regression** and a **Decision Tree**. I mainly w
 
 Logistic Regression picked up on some of the differences between the modes, but it struggled the most with MODE 4 vs MODE 5. That makes sense because the two trucking modes are inherently similar in weight, value, and distance profiles.
 
-### Decision Tree Classifier
+#### Decision Tree Classifier
 
 - `random_state=42`  
 - No other tuning  
@@ -167,7 +167,7 @@ The Decision Tree performed slightly better overall and produced more balanced s
 
 ---
 
-## Insights and Interpretation
+#### Insights and Interpretation
 
 Even though the models are far from perfect, they still reveal useful information about national shipment behavior:
 
@@ -180,7 +180,7 @@ Overall, classification helped us understand how shipments “cluster” around 
 
 ---
 
-## Impact and Considerations
+#### Impact and Considerations
 
 If a system like this were used in a real logistics environment, it could influence:
 

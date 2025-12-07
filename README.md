@@ -324,6 +324,9 @@ Contacts: nbalakr2@charlotte.edu | github.com/nbalakr2
 ### Kristen Lai
 **Computer Science Student** at University of North Carolina at Charlotte | Class of 2028<br>
 Contacts: klai3@charlotte.edu | github.com/kristenlai
+### Kristen Lai
+**Computer Science Student** at University of North Carolina at Charlotte | Class of 2026<br>
+Contacts: nto@charlotte.edu | github.com/nathanto99
 
 ## References
 1) Python Software Foundation. (2023). Python 3.x. Retrieved from https://www.python.org/

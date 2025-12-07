@@ -73,6 +73,14 @@ For our final visualization of national trends, we wanted to understand what was
 
 
 ### Visualizing: NC Trends
+<img width="1189" height="590" alt="image" src="https://github.com/user-attachments/assets/1f2387bb-3e0a-4b84-9756-ff0a6f851556" />
+
+<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/32e38b0f-e8f5-45b9-90da-a1e0a4413d6d" />
+
+<img width="1081" height="547" alt="image" src="https://github.com/user-attachments/assets/86a12205-116a-4d5b-b8ee-ff09392ba07d" />
+
+<img width="990" height="590" alt="image" src="https://github.com/user-attachments/assets/9b4c1f89-3732-48a1-a5d2-597539676d72" />
+
 
 ## Classification Investigation
 

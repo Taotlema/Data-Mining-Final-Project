@@ -74,13 +74,16 @@ For our final visualization of national trends, we wanted to understand what was
 
 ### Visualizing: NC Trends
 <img width="1189" height="590" alt="image" src="https://github.com/user-attachments/assets/1f2387bb-3e0a-4b84-9756-ff0a6f851556" />
+This chart shows which types of goods make up the highest shipment value from North Carolina. Textiles & Leather and Pharmaceuticals clearly stand out, meaning these industries contribute the most to the state’s outbound economy. Machinery and Motor Vehicles also appear high on the list, showing the importance of manufacturing and industrial production. The remaining categories—such as Tobacco, Electronics, Mixed Freight, and Plastics & Rubber—add to the overall diversity of goods being shipped but at lower value levels compared to the top industries. Overall, the visualization highlights that North Carolina heavily relies on manufacturing, textiles, and pharmaceutical goods for its highest-value shipments.
 
 <img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/32e38b0f-e8f5-45b9-90da-a1e0a4413d6d" />
+This chart shows how North Carolina’s shipment value changes throughout the year. Q1 and Q2 have the highest shipment levels, meaning most goods are moved during the first half of the year. This could be tied to manufacturing cycles, seasonal demand, or restocking after the holidays. In Q3 and Q4, shipment values drop, showing a slowdown in activity as the year goes on. Overall, the visualization highlights a clear pattern—North Carolina ships more goods early in the year compared to later months.
 
 <img width="1081" height="547" alt="image" src="https://github.com/user-attachments/assets/86a12205-116a-4d5b-b8ee-ff09392ba07d" />
+This chart shows the main states that receive goods shipped out of North Carolina. Georgia is the top destination by a noticeable margin, followed by Virginia and South Carolina. This pattern makes sense because these states are close by, meaning transportation is cheaper and faster. States like Texas, New York, and Florida also receive large amounts of goods, showing that North Carolina ships beyond just the Southeast. The remaining states—Tennessee, Ohio, California, and Indiana—make up smaller but still significant portions of outbound shipments. Overall, the visualization shows that while regional shipments dominate, North Carolina is also connected to major markets across the country.
 
 <img width="990" height="590" alt="image" src="https://github.com/user-attachments/assets/9b4c1f89-3732-48a1-a5d2-597539676d72" />
-
+This chart shows which industries generate the highest shipment value in North Carolina. Manufacturing stands out by far as the largest contributor, showing how heavily the state relies on producing goods like textiles, machinery, pharmaceuticals, and electronics. Wholesale Trade is the second-largest industry, which makes sense because it supports the distribution and resale of manufactured products. Transportation & Warehousing also plays a major role, reflecting the infrastructure needed to move goods within and outside the state. Mining and Information appear with very small values, meaning they contribute only a small share of outbound shipments. Overall, the chart highlights that North Carolina’s shipping activity is driven mainly by manufacturing and distribution-focused industries.
 
 ## Classification Investigation
 
